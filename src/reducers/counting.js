@@ -41,21 +41,24 @@ export default function counter(state = initialState, action) {
     switch (action.type) {
         case INCREMENT:
             return {
+                ...state,
                 number: state.number + 1,
             };
         case DECREMENT:
             return {
+                ...state,
                 number: state.number - 1,
             };
         case RESET:
             return {
+                ...state,
                 number: initialState
             }
         case PUSH:
             return {
-                number: state.number + 1
+                ...state,
+                number: state.number + action.value
             }
-
         default:
             return state
     }
