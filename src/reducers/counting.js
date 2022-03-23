@@ -1,9 +1,8 @@
-
 // Actions
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 const RESET = 'RESET';
-const PUSH = 'PUSH';
+const PUSH = 'COUNTERPUSH';
 
 // Action Creator
 export const increment = () => {
@@ -29,7 +28,6 @@ export const push = () => {
         type: PUSH,
     }
 }
-
 
 // 초기값 설정
 const initialState = {

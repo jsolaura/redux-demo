@@ -8,12 +8,11 @@ const AddNumber = () => {
     const count = useSelector((state => state.counterData.number));
 
     return (
-        <div>
-            <h1>Add Number</h1>
+        <div className={"box"}>
+            <h1>Number change 1 by 1</h1>
             <h4>{count}</h4>
-            <br/>
-            <button onClick={() => dispatch(increment())}>+</button>
-            <button onClick={() => dispatch(decrement())}>-</button>
+            <button onClick={() => dispatch(increment())}>+1</button>
+            <button onClick={() => dispatch(decrement())}>-1</button>
             {/*<button onClick={() => dispatch(push())}>PUSH</button>*/}
         </div>
     );

@@ -1,9 +1,64 @@
+body {
+  background: rgba(0, 0, 0, .8);
+}
 .App {
+  background: #fff;
   text-align: center;
 }
 
 div {
-  border: 2px solid orange;
+  /*border: 2px solid orange;*/
   margin: 10px;
   padding: 1rem;
+}
+
+button, input, select {
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+}
+
+button, input[type="button"] {
+  background: #333;
+  color: #fff;
+  margin: 0 0.2rem;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+}
+
+.h1Wrap {
+  position: relative;
+}
+
+.shippingCount {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.shippingCount span {
+  margin-right: 0.5rem;
+  color: tomato;
+}
+
+.inputContainer span,
+.inputContainer label:first-child {
+  margin-right: 0.5rem;
+}
+
+{
+
 }
