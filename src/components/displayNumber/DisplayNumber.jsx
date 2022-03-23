@@ -1,15 +1,13 @@
-import React, {useState} from 'react';
-import {numberStore} from "../../store";
+import React from 'react';
+import {useSelector} from "react-redux";
 
 const DisplayNumber = () => {
-    const [number, setNumber] = useState(0);
-    numberStore.subscribe(() => {
-        setNumber(numberStore.getState().number)
-    })
+    const value = useSelector((state => state.counterData.number));
+
     return (
         <div>
             <h1>Display Number</h1>
-            <input type={"number"} value={number} readOnly/>
+            <input type={"number"} value={value} readOnly/>
         </div>
     );
 };
