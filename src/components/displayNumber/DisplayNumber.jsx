@@ -1,10 +1,13 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+import {increment, reset} from "../../reducers/counting";
 
 const DisplayNumber = () => {
-    const [value, setValue] = useState(1);
+    const [value, setValue] = useState(0);
+    const inputRef = useRef(null);
     const dispatch = useDispatch();
     const count = useSelector((state => state.counterData.number));
+    const showCounter = useSelector((state => state.counterData.showCounter));
     const onChange = (e) => {
         setValue(Number(e.target.value));
     }
@@ -12,11 +15,16 @@ const DisplayNumber = () => {
     return (
         <div className={"box"}>
             <h1>Number change <br/>How many I want</h1>
-            <h5>{count}</h5>
-            <input type={"number"} value={value} onChange={onChange}/>
+            {showCounter && <h5>{count}</h5>}
+            <input type={"number"} ref={inputRef} min={0} value={value} onChange={onChange}/>
             <input type={"button"} value={"+value"} onClick={() =>{
                 dispatch({type: "COUNTERPUSH", value})
             }}/>
+            <button type={"button"} onClick={() => {
+                setValue(0);
+                inputRef.current.focus();
+                dispatch(reset())
+            }}>Reset</button>
         </div>
     );
 };
