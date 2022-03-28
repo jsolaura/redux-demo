@@ -1,0 +1,26 @@
+.login {
+
+}
+
+.loginControl {
+    transition: all 0.35s;
+    /*font-size: 0.9rem;*/
+}
+
+.loginControl label {
+    margin-bottom: 0.5rem;
+}
+
+.loginControl input {
+    margin-bottom: 0.5rem;
+}
+
+.loginControl.invalid input {
+    border: 1px solid red;
+}
+
+.loginControl.invalid span {
+    color: red;
+    font-size: 0.8rem;
+
+}

@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {increment, reset} from "../../reducers/counting";
+import {counterActions, increment, reset} from "../../reducers/counting";
 
 const DisplayNumber = () => {
     const [value, setValue] = useState(0);
@@ -18,12 +18,12 @@ const DisplayNumber = () => {
             {showCounter && <h5>{count}</h5>}
             <input type={"number"} ref={inputRef} min={0} value={value} onChange={onChange}/>
             <input type={"button"} value={"+value"} onClick={() =>{
-                dispatch({type: "COUNTERPUSH", value})
+                dispatch(counterActions.push(value));
             }}/>
             <button type={"button"} onClick={() => {
                 setValue(0);
                 inputRef.current.focus();
-                dispatch(reset())
+                dispatch(counterActions.reset())
             }}>Reset</button>
         </div>
     );
