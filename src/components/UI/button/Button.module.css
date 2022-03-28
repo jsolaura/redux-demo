@@ -1,14 +1,15 @@
 .btn {
     padding: 0.3rem 0.5rem;
-    border: 1px solid #333;
-    border-radius: 20px;
+    border: 1px solid #777;
+    background: #777;
+    color: #fff;
     cursor: pointer;
     transition: all 0.35s;
 }
 .btn:hover,
 .btn:active {
-    background: #333;
-    color: #fff;
+    /*background: #333;*/
+    /*color: #fff;*/
 }
 
 .btn:focus {

@@ -1,0 +1,24 @@
+.headerWrap {
+    width: 100%;
+    height: 110px;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.headerWrap header {
+    width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb li:last-child {
+    margin-left: 40px;
+}
+

@@ -1,0 +1,199 @@
+.login, .register {
+    width: 420px;
+    margin: 80px auto 0;
+    text-align: left;
+}
+
+:is(.login, .register) h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+:is(.login, .register) h3 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 38px;
+}
+
+/*login*/
+.loginControl {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s;
+    /*font-size: 0.9rem;*/
+}
+
+.loginControl label {
+    margin-bottom: 14px;
+}
+
+
+.loginControl input {
+    margin-bottom: 30px;
+}
+
+.loginControl.invalid input {
+    border: 1px solid red;
+}
+
+.loginControl.invalid span {
+    color: red;
+    font-size: 0.8rem;
+}
+.loginBtn {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
+/*register*/
+.registerForm {
+    margin-bottom: 120px;
+}
+.userType {
+    display: flex;
+    margin-bottom: 59px;
+}
+
+.userType label {
+    width: 50%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e1e1e1;
+}
+.userType label:last-child {
+    border-left: 0;
+}
+
+.userType input {
+    display: none;
+}
+
+.userType label {
+    cursor: pointer;
+}
+
+.userType label img {
+    margin-right: 7px;
+}
+
+.userType label.active {
+    border: 1px solid #000;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.formInput label {
+    margin-bottom: 14px;
+}
+
+.formInput input {
+
+}
+.inputInvalid {
+    border: 1px solid #e03131;
+}
+.spanInvalid {
+    color: #e03131;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.spanCorrect {
+    color: #15aabf;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.caption {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.passwordInput {
+    position: relative;
+}
+
+.passwordInput input {
+    width: 100%;
+}
+
+.passwordBtn {
+    width: 24px;
+    height: 20px;
+    background: url("/src/asset/image/eye-off.png") no-repeat 100%;
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.termsContainer {
+
+}
+.termsContainer label {
+    display: flex;
+}
+.termsContainer input {
+    display: none;
+}
+
+.checkAll {
+    font-weight: 700;
+}
+
+.checkAll span {
+    font-weight: 400;
+    margin-left: 0.2rem;
+}
+
+.termsCheckBtn {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #e1e1e1;
+    /*background: url("/src/asset/image/check.png") no-repeat center center ;*/
+    margin-right: 10px;
+}
+
+.termsSubContainer {
+    padding: 25px 20px;
+    border: 1px solid #e1e1e1;
+}
+
+.subLabel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.termsSubContainer li:last-child .subLabel {
+    margin-bottom: 0;
+}
+
+.termSubInput {
+    display: flex;
+}
+
+.termLink {
+    width: 9px;
+    height: 16px;
+    background: url("/src/asset/image/invalid-name.png") no-repeat center center;
+}
+
+.formSubmit {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    background: #777;
+    color: #fff;
+    font-size: 18px;
+}
